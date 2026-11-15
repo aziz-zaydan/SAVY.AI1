@@ -1,0 +1,26 @@
+/* sportif: menu first, calculator folded, one filter row, one order bar */
+body[data-page="sportif"] #search,body[data-page="sportif"] .search-wrap,
+body[data-page="sportif"] #cuisine-tabs,body[data-page="sportif"] #persona-tabs-label,
+body[data-page="sportif"] #delivery-badge,body[data-page="sportif"] #cart-bar,
+body[data-page="sportif"] #nutri-calc .section-header,
+body[data-page="sportif"] #nutri-calc .nutri-row:has(#nc-cut),
+body[data-page="sportif"] #nutri-results{display:none!important}
+body[data-page="sportif"] #nutri-calc{display:none;padding:0!important;margin:-6px 0 14px;background:none!important;border:0!important}
+body[data-page="sportif"] #nutri-calc.open{display:block}
+body[data-page="sportif"] #nutri-calc .nutri-inner{padding:0!important}
+body[data-page="sportif"] #nutri-calc .nutri-form{border-radius:20px;box-shadow:0 12px 28px -20px rgba(15,23,42,.5);padding:14px!important}
+body[data-page="sportif"] #sp-calc-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;margin:-4px 0 14px;padding:11px 14px;border-radius:99px;border:1.5px dashed #38BDF8;background:#F0F9FF;color:#0B3D1A;font-weight:800;font-size:13px;cursor:pointer}
+body[data-page="sportif"] #sp-calc-btn.done{border-style:solid;background:#38BDF8;color:#13294B}
+body[data-page="sportif"] #persona-plan{border-radius:22px!important;box-shadow:0 12px 28px -22px rgba(15,23,42,.45)}
+/* single order bar + small chat button */
+body[data-page="sportif"] .fab-main-badge,body[data-page="sportif"] .fab-savy-badge{display:none!important}
+body[data-page="sportif"] #fab-main-wrap{width:36px!important;height:36px!important;bottom:92px!important}
+body[data-page="sportif"] #fab-main{width:36px!important;height:36px!important;opacity:.9}
+body[data-page="sportif"] #fab-main svg{width:22px!important;height:22px!important}
+body[data-page="sportif"] .hx-visual,body[data-page="sportif"] #ph-btn{display:none!important}
+body[data-page="sportif"] #persona-hero{padding-bottom:14px!important}
+body[data-page="sportif"] #menu{padding-top:8px!important}
+body[data-page="sportif"] .mv-bar button.on{background:#0284C7!important;color:#fff!important;border-color:#0284C7!important}
+body[data-page="sportif"] #mobile-order-bar{background:#0284C7!important}
+body[data-page="sportif"] #mobile-order-bar .mob-bar-btn{background:#fff!important;color:#0284C7!important}
+body[data-page="sportif"] .section-title,body[data-page="sportif"] #persona-plan .pp-title,body[data-page="sportif"] .dish-name{color:#0B3D1A!important}

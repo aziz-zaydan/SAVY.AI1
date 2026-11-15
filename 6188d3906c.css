@@ -1,0 +1,253 @@
+/* ===== final design pass: one palette, clear hierarchy ===== */
+:root,body,body[data-page]{--deep:#0B3D1A;--brand:#0B3D1A;--logo:#00B02C;--tint:#E8F8EC;--amber:#FFB547;--page:#F3F9F4}
+body[data-page="employee"],body[data-page="sportif"],body[data-page="famille"],body[data-page="couple"]{--ink:#0B3D1A!important;background:var(--page)!important}
+/* hero: deep → logo green with soft light */
+body[data-page] #persona-hero{background:radial-gradient(120% 90% at 85% 0%,rgba(255,255,255,.18),transparent 55%),linear-gradient(145deg,#007A22 0%,#00B02C 100%)!important;border-radius:0 0 34px 34px!important;box-shadow:0 20px 40px -28px rgba(0,90,30,.7)}
+body[data-page] #persona-hero h1,body[data-page] #persona-hero .ph-title{letter-spacing:-.4px;text-shadow:0 2px 14px rgba(0,60,20,.25)}
+body[data-page] .ps-chip{backdrop-filter:blur(6px);font-weight:800}
+/* trust strip */
+#trust-strip{background:var(--tint)!important;border:0!important}
+#trust-strip span{color:var(--deep)!important}
+/* intro box: lighter green so it reads as a second layer */
+body[data-page="sportif"] #persona-plan,body[data-page="famille"] #persona-plan,body[data-page="couple"] #persona-plan,body[data-page="employee"] .ei-pref{background:linear-gradient(135deg,#00B02C,#2BCB52)!important;box-shadow:0 16px 32px -22px rgba(0,120,35,.8)!important}
+/* menu card + dish cards */
+.pp-card{background:#fff;border:1px solid rgba(11,61,26,.06)!important;box-shadow:0 22px 44px -30px rgba(11,61,26,.45)!important}
+body[data-page] .dish-card,body[data-page] .wp-dish{border:1px solid rgba(11,61,26,.07)!important;box-shadow:0 12px 26px -20px rgba(11,61,26,.5)!important}
+body[data-page] .dish-name,body[data-page] .wp-nm{color:var(--deep)!important;letter-spacing:-.1px}
+body[data-page] .dish-price-float,body[data-page] .wp-pr{background:#00A528!important;font-weight:800!important;letter-spacing:.2px;box-shadow:0 4px 10px -4px rgba(0,80,20,.6)}
+body[data-page] .dish-card .add-btn,body[data-page] .wp-dish .pk-add{background:var(--amber)!important;color:var(--deep)!important}
+body[data-page] .dish-badge-float{background:var(--deep)!important;color:#fff!important}
+/* chips and toggles */
+body[data-page] .pp-sort button.on,body[data-page] .mv-bar button.on,body[data-page] #diet-filters .on,body[data-page] #diet-filters .filter-btn.active,body[data-page] .pk-sort button.on{background:var(--deep)!important;border-color:var(--deep)!important;color:#fff!important}
+body[data-page] .pp-sort button,body[data-page] .pk-sort button{color:var(--deep)!important;border-color:#DCEBDD!important}
+/* order bar + nav action: deep green with amber button */
+body[data-page] #mobile-order-bar,body[data-page] #emp-bar{background:var(--deep)!important}
+body[data-page] #mobile-order-bar *,body[data-page] #emp-bar .eb-sum,body[data-page] #emp-bar .eb-sum *{color:#fff}
+body[data-page] #mobile-order-bar .mob-bar-btn,body[data-page] #emp-bar button{background:var(--amber)!important;color:var(--deep)!important}
+body[data-page] .btn-cta{background:var(--deep)!important;color:#fff!important}
+/* chat button */
+#fab-main{background:var(--logo)!important;box-shadow:0 10px 24px -8px rgba(0,120,35,.7)!important}
+/* welcome sheet on home */
+.ht,.persona-card,.pk-card{border-color:#CFEAD4}
+#persona-plan h2,#persona-plan h3,#persona-plan h4,#persona-plan [class*="title"],#persona-plan [class*="-t"]{color:#fff!important}
+body[data-page="sportif"] #sp-calc-btn{border:1.5px dashed var(--logo)!important;background:var(--tint)!important;color:var(--deep)!important}
+body[data-page="sportif"] #sp-calc-btn.done{background:var(--logo)!important;color:#fff!important}
+body[data-page] #persona-plan .pp-title{color:#fff!important}
+/* ===== smoother, softer colours ===== */
+:root,body,body[data-page]{--deep:#14532D;--brand:#14532D;--amber:#FFC35E;--page:#F6FBF7;--tint:#EAF8EE}
+body[data-page="employee"],body[data-page="sportif"],body[data-page="famille"],body[data-page="couple"]{--ink:#14532D!important}
+/* hero: gentler gradient */
+body[data-page] #persona-hero{background:radial-gradient(110% 80% at 85% 0%,rgba(255,255,255,.22),transparent 60%),linear-gradient(150deg,#12A83B 0%,#3FCB63 100%)!important;box-shadow:0 18px 36px -30px rgba(0,110,40,.55)!important}
+/* intro box: soft mint instead of a second solid green block */
+body[data-page="sportif"] #persona-plan,body[data-page="famille"] #persona-plan,body[data-page="couple"] #persona-plan,body[data-page="employee"] .ei-pref{background:linear-gradient(135deg,#EAF9EE,#F7FDF8)!important;border:1px solid #CDEED6!important;box-shadow:0 14px 28px -24px rgba(20,83,45,.5)!important;color:#14532D!important}
+body[data-page] #persona-plan,body[data-page] #persona-plan *,body[data-page] .ei-pref,body[data-page] .ei-pref *:not(button):not(.on){color:#14532D!important}
+body[data-page] #persona-plan .pp-title,body[data-page] .ei-pref b,body[data-page] .ei-pref h3{color:#0F4A27!important}
+body[data-page] #persona-plan .pp-chips button,body[data-page] #persona-plan .pp-row .q button,body[data-page] .ei-pref button{background:#fff!important;color:#14532D!important;border:1.5px solid #BFE6C9!important;box-shadow:0 2px 6px -3px rgba(20,83,45,.25)}
+body[data-page] #persona-plan .pp-chips button.on,body[data-page] .ei-pref button.on,body[data-page] .ei-pref button.act{background:#00B02C!important;border-color:#00B02C!important;color:#fff!important}
+body[data-page] .ei-pref .wk{background:#fff!important;color:#14532D!important}
+body[data-page] #persona-plan .pp-bar{background:#D6EFDC!important}
+body[data-page] #persona-plan .pp-bar i{background:#00B02C!important}
+body[data-page] #persona-plan .pp-slot{background:#fff!important;border:1.5px solid #BFE6C9!important}
+body[data-page] #persona-plan .pp-slot *{color:#14532D!important}
+body[data-page] #persona-plan .pp-slot.active{background:#00B02C!important;border-color:#00B02C!important}
+body[data-page] #persona-plan .pp-slot.active *{color:#fff!important}
+body[data-page] #persona-plan .pp-row{border-color:#CDEED6!important}
+/* softer details */
+body[data-page] .dish-price-float,body[data-page] .wp-pr{background:#14A83A!important}
+body[data-page] .dish-card,body[data-page] .wp-dish{box-shadow:0 10px 22px -18px rgba(20,83,45,.38)!important}
+.pp-card{box-shadow:0 18px 38px -30px rgba(20,83,45,.35)!important}
+body[data-page] #trust-strip{background:#EAF8EE!important}
+/* ===== ONE green: the logo green #00B02C ===== */
+:root,body,body[data-page]{--deep:#00B02C;--brand:#00B02C;--logo:#00B02C;--green:#00B02C;--greenL:#00B02C;--ink:#0F172A}
+body[data-page="employee"],body[data-page="sportif"],body[data-page="famille"],body[data-page="couple"]{--ink:#0F172A!important}
+body[data-page] #persona-hero{background:radial-gradient(110% 80% at 85% 0%,rgba(255,255,255,.16),transparent 60%),#00B02C!important}
+body[data-page] .dish-price-float,body[data-page] .wp-pr{background:#00B02C!important}
+body[data-page] #mobile-order-bar,body[data-page] #emp-bar,body[data-page] .btn-cta{background:#00B02C!important}
+body[data-page] #mobile-order-bar .mob-bar-btn,body[data-page] #emp-bar button{color:#0F172A!important}
+body[data-page] .pp-sort button.on,body[data-page] .mv-bar button.on,body[data-page] #diet-filters .on,body[data-page] #diet-filters .filter-btn.active,body[data-page] .pk-sort button.on{background:#00B02C!important;border-color:#00B02C!important}
+body[data-page] .pp-sort button,body[data-page] .pk-sort button,body[data-page] .dish-name,body[data-page] .wp-nm,body[data-page] .section-title{color:#0F172A!important}
+body[data-page] .pp-sort button.on{color:#fff!important}
+body[data-page] .dish-badge-float{background:#0F172A!important}
+body[data-page] #persona-plan,body[data-page] #persona-plan *,body[data-page] .ei-pref,body[data-page] .ei-pref *:not(button):not(.on){color:#0F172A!important}
+body[data-page] #persona-plan .pp-title,body[data-page] .ei-pref b,body[data-page] .ei-pref h3{color:#0F172A!important}
+body[data-page] #persona-plan .pp-chips button,body[data-page] #persona-plan .pp-row .q button,body[data-page] .ei-pref button{color:#0F172A!important;border-color:#CDEED6!important}
+body[data-page] #persona-plan .pp-chips button.on,body[data-page] .ei-pref button.on,body[data-page] .ei-pref button.act{background:#00B02C!important;color:#fff!important}
+body[data-page] #persona-plan .pp-slot *{color:#0F172A!important}
+body[data-page] #persona-plan .pp-slot.active *{color:#fff!important}
+body[data-page] #trust-strip span{color:#0F172A!important}
+body[data-page="sportif"] #sp-calc-btn{color:#0F172A!important}
+body[data-page] #diet-filters .pill.active,body[data-page] .pill.active{background:#00B02C!important;border-color:#00B02C!important;color:#fff!important}
+body[data-page] nav .btn-cta,body[data-page] .btn-cta.btn-cta-sm,body[data-page] button.btn-cta{background:#00B02C!important;color:#fff!important}
+html body[data-page] button.btn-cta.btn-cta-sm,html body[data-page] button.btn-cta{background-color:#00B02C!important;background-image:none!important}
+html body #navbar .btn-cta-sm,html body #navbar .btn-cta{background:#00B02C!important;color:#fff!important}
+/* ===== smoothness: motion, rounding, softness ===== */
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+button,a,.dish-card,.wp-dish,.pill,.ht,.pp-slot,.ei-daysum .dp{transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .25s ease,background-color .25s ease,color .25s ease,border-color .25s ease,opacity .25s ease}
+button:active,.ht:active,.pp-slot:active{transform:scale(.97)}
+/* softer shapes */
+.pill,.pp-sort button,.mv-bar button,#diet-filters button{border-radius:999px!important}
+.dish-card,.wp-dish{border-radius:24px!important}
+.pp-card,#persona-plan,.ei-pref,#weekly-plan{border-radius:28px!important}
+.dish-card .dish-photo,.wp-dish .wp-ph{border-radius:24px 24px 0 0}
+.dish-card .dish-photo img,.wp-dish .wp-ph img{transition:transform .5s ease}
+.dish-card:active .dish-photo img{transform:scale(1.04)}
+/* gentle entrance for the menu only (one moment, not everywhere) */
+@keyframes savyIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+#dishes-list .dish-card{animation:savyIn .45s ease both}
+#dishes-list .dish-card:nth-child(2){animation-delay:.05s}#dishes-list .dish-card:nth-child(3){animation-delay:.1s}#dishes-list .dish-card:nth-child(4){animation-delay:.15s}
+/* sheets / bars glide */
+#meal-sheet,#mobile-order-bar,#emp-bar{transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .3s ease}
+#navbar{backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);background:rgba(255,255,255,.88)!important;box-shadow:0 1px 0 rgba(15,23,42,.05),0 8px 24px -18px rgba(15,23,42,.25)}
+/* softer hairlines and shadows everywhere */
+.dish-card,.wp-dish,.pp-card,#persona-plan,.ei-pref{border-color:rgba(15,23,42,.05)!important}
+.dish-card,.wp-dish{box-shadow:0 8px 24px -16px rgba(15,23,42,.28)!important}
+.dish-card:hover,.wp-dish:hover{box-shadow:0 14px 30px -16px rgba(15,23,42,.32)!important;transform:translateY(-2px)}
+::selection{background:#B7EFC4}
+/* ===== smoother greens: soft gradients, fewer hard blocks ===== */
+:root{--g1:#00B02C;--g2:#27C453;--g3:#5CD680;--gsoft:#EAF9EE}
+body[data-page] #persona-hero{background:radial-gradient(120% 90% at 90% -10%,rgba(255,255,255,.28),transparent 58%),radial-gradient(90% 70% at 0% 100%,rgba(0,120,40,.22),transparent 60%),linear-gradient(155deg,#0FB535 0%,#33CB5C 60%,#4FD475 100%)!important}
+body[data-page] .ps-chip{background:rgba(255,255,255,.22)!important;border:1px solid rgba(255,255,255,.55)!important;color:#fff!important}
+body[data-page] .ps-chip.on{background:#fff!important;color:#00A028!important}
+/* gradient instead of flat green for filled controls */
+body[data-page] #diet-filters .pill.active,body[data-page] .pp-sort button.on,body[data-page] .mv-bar button.on,body[data-page] .pk-sort button.on,
+body[data-page] #persona-plan .pp-chips button.on,body[data-page] .ei-pref button.on,body[data-page] .ei-pref button.act,body[data-page] #persona-plan .pp-slot.active,
+html body #navbar .btn-cta-sm,html body #navbar .btn-cta{background:linear-gradient(135deg,#00B02C,#2BC955)!important;border-color:transparent!important;box-shadow:0 8px 18px -10px rgba(0,150,40,.75)!important}
+body[data-page] .dish-price-float,body[data-page] .wp-pr{background:linear-gradient(135deg,#00AE2B,#25C150)!important;box-shadow:0 6px 14px -8px rgba(0,130,35,.7)!important;border:0!important}
+body[data-page] #mobile-order-bar,body[data-page] #emp-bar{background:linear-gradient(180deg,rgba(255,255,255,.96),#fff)!important;border-top:1px solid #DDF3E2!important;box-shadow:0 -14px 30px -22px rgba(0,110,35,.45)!important}
+body[data-page] #mobile-order-bar *,body[data-page] #emp-bar .eb-sum,body[data-page] #emp-bar .eb-sum *{color:#0F172A!important}
+body[data-page] #mobile-order-bar [id*="sub"]{color:#4B6B55!important}
+body[data-page] #mobile-order-bar .mob-bar-btn,body[data-page] #emp-bar button{background:linear-gradient(135deg,#00B02C,#2BC955)!important;color:#fff!important;box-shadow:0 10px 20px -10px rgba(0,150,40,.8)!important;border-radius:16px!important}
+#fab-main{background:linear-gradient(135deg,#00B02C,#2BC955)!important;box-shadow:0 12px 26px -10px rgba(0,140,40,.7)!important}
+/* very soft green washes behind sections */
+body[data-page]{background:linear-gradient(180deg,#F1FAF3 0%,#F8FCF9 40%,#FFFFFF 100%)!important}
+#trust-strip{background:linear-gradient(90deg,#EAF9EE,#F4FCF6,#EAF9EE)!important}
+.pp-card{background:linear-gradient(180deg,#fff,#FBFEFC)!important}
+body[data-page] #persona-plan,body[data-page] .ei-pref{background:linear-gradient(145deg,#EAF9EE,#F8FDF9)!important;border:1px solid #D3F0DB!important}
+.ht,.persona-card{border-color:#D3F0DB!important}
+body[data-page] .ps-chip:not(.on){color:#fff!important}
+body[data-page] #persona-hero a[href*="index"],body[data-page] #persona-hero .ph-back{color:#fff!important;opacity:.95}
+/* ===== + buttons green; softer, more blended colour ===== */
+body[data-page] .dish-card .add-btn,body[data-page] .wp-dish .pk-add,body[data-page] .dish-card .add-btn.added{background:linear-gradient(135deg,#00B02C,#34CB5E)!important;color:#fff!important;box-shadow:0 8px 16px -8px rgba(0,140,40,.7)!important;border:2px solid rgba(255,255,255,.85)!important}
+body[data-page] .dish-card .add-btn.added{background:linear-gradient(135deg,#0A9A30,#1FB848)!important}
+body[data-page] .dish-price-float,body[data-page] .wp-pr{background:rgba(255,255,255,.92)!important;color:#00962A!important;backdrop-filter:blur(6px);box-shadow:0 4px 12px -6px rgba(0,60,20,.4)!important}
+body[data-page] .dish-badge-float{background:rgba(15,23,42,.55)!important;backdrop-filter:blur(6px)}
+/* hero blends into the page instead of a hard edge */
+body[data-page] #persona-hero{border-radius:0 0 40px 40px!important;box-shadow:0 26px 40px -32px rgba(0,140,40,.55)!important}
+body[data-page] #persona-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(to bottom,transparent,rgba(241,250,243,.35));pointer-events:none;border-radius:0 0 40px 40px}
+#trust-strip{background:transparent!important}
+/* pastel greens for secondary surfaces */
+body[data-page] .pp-sort button,body[data-page] .pk-sort button,body[data-page] #diet-filters .pill:not(.active){background:#F3FBF5!important;border:1px solid #D9F1E0!important;box-shadow:none!important}
+body[data-page] #persona-plan .pp-chips button,body[data-page] #persona-plan .pp-row .q button,body[data-page] .ei-pref button:not(.on):not(.act){background:#fff!important;border:1px solid #D3F0DB!important}
+.pp-card{box-shadow:0 24px 50px -36px rgba(0,120,40,.35)!important}
+body[data-page] .dish-card,body[data-page] .wp-dish{box-shadow:0 10px 26px -20px rgba(0,100,35,.35)!important;border-color:#E6F5EA!important}
+body[data-page] #fab-main{border:2px solid rgba(255,255,255,.9)}
+/* ===== smaller + button, gentler colours ===== */
+body[data-page] .dish-card .add-btn,body[data-page] .wp-dish .pk-add{width:26px!important;height:26px!important;min-width:0!important;font-size:17px!important;line-height:1!important;border:1.5px solid rgba(255,255,255,.9)!important;top:7px!important;inset-inline-end:7px!important;box-shadow:0 5px 10px -6px rgba(0,120,35,.65)!important;padding:0!important}
+body[data-page] .dish-card .add-btn.added{font-size:13px!important}
+body[data-page] .dish-card .ms-i{width:26px!important;height:26px!important;font-size:12px!important;top:7px!important;inset-inline-start:7px!important}
+/* calmer, lighter greens */
+body[data-page] #persona-hero{background:radial-gradient(120% 90% at 90% -10%,rgba(255,255,255,.32),transparent 58%),linear-gradient(155deg,#2CC356 0%,#52D177 60%,#6FDB90 100%)!important;box-shadow:0 26px 40px -34px rgba(0,150,45,.4)!important}
+body[data-page] .dish-card .add-btn,html body #navbar .btn-cta-sm,html body #navbar .btn-cta,body[data-page] #diet-filters .pill.active,body[data-page] .pp-sort button.on,body[data-page] .mv-bar button.on,body[data-page] .pk-sort button.on,
+body[data-page] #persona-plan .pp-chips button.on,body[data-page] .ei-pref button.on,body[data-page] .ei-pref button.act,body[data-page] #persona-plan .pp-slot.active,
+body[data-page] #mobile-order-bar .mob-bar-btn,body[data-page] #emp-bar button,#fab-main{background:linear-gradient(135deg,#1DBB46,#4BD26F)!important;box-shadow:0 8px 16px -12px rgba(0,140,40,.55)!important}
+body[data-page] .dish-price-float,body[data-page] .wp-pr{color:#12A83B!important}
+.pp-card,body[data-page] .dish-card,body[data-page] .wp-dish{box-shadow:0 10px 24px -22px rgba(0,100,35,.25)!important}
+/* ===== clear & light: pale mint instead of dark/strong blocks ===== */
+:root,body,body[data-page]{--txt:#27443A;--txt2:#5F7A6C}
+body[data-page] #persona-hero{background:radial-gradient(120% 90% at 90% -10%,rgba(255,255,255,.9),transparent 60%),linear-gradient(160deg,#DDF6E5 0%,#C8F0D6 55%,#B6EAC8 100%)!important;box-shadow:0 22px 38px -34px rgba(0,150,45,.3)!important}
+body[data-page] #persona-hero h1,body[data-page] #persona-hero .ph-title,body[data-page] #persona-hero [id*="title"]{color:#1E5B3A!important;text-shadow:none!important}
+body[data-page] #persona-hero p,body[data-page] #persona-hero [id*="desc"],body[data-page] #persona-hero a,body[data-page] #persona-hero .ph-back{color:#3E6B54!important}
+body[data-page] .ps-chip:not(.on){background:rgba(255,255,255,.65)!important;border:1px solid rgba(255,255,255,.95)!important;color:#2F6B4A!important}
+body[data-page] .ps-chip.on{background:#fff!important;color:#12A83B!important;box-shadow:0 6px 14px -10px rgba(0,120,40,.5)}
+/* text: soft green-grey instead of near-black */
+body[data-page] .dish-name,body[data-page] .wp-nm,body[data-page] .section-title,body[data-page] .pp-sort button,body[data-page] .pk-sort button,
+body[data-page] #persona-plan,body[data-page] #persona-plan *,body[data-page] .ei-pref,body[data-page] .ei-pref *:not(button):not(.on),body[data-page] #trust-strip span{color:var(--txt)!important}
+body[data-page] #persona-plan .pp-sub,body[data-page] .dish-macros>span{color:var(--txt2)!important}
+body[data-page] #persona-plan .pp-chips button,body[data-page] #persona-plan .pp-row .q button,body[data-page] .ei-pref button:not(.on):not(.act){color:var(--txt)!important}
+body[data-page] #persona-plan .pp-chips button.on,body[data-page] .ei-pref button.on,body[data-page] .ei-pref button.act,body[data-page] #persona-plan .pp-slot.active *{color:#fff!important}
+/* selected slot / active states: light mint with green text, not solid */
+body[data-page] #persona-plan .pp-slot.active{background:#DDF6E5!important;border-color:#8FDCA9!important;box-shadow:none!important}
+body[data-page] #persona-plan .pp-slot.active *{color:#14803A!important}
+/* nav button + filters softer */
+html body #navbar .btn-cta-sm,html body #navbar .btn-cta{background:linear-gradient(135deg,#3CCB63,#63D983)!important}
+body[data-page] #diet-filters .pill.active,body[data-page] .pp-sort button.on,body[data-page] .mv-bar button.on,body[data-page] .pk-sort button.on{background:linear-gradient(135deg,#3CCB63,#63D983)!important}
+body[data-page] .dish-badge-float{background:rgba(255,255,255,.88)!important;color:#27443A!important}
+html body[data-page] #persona-hero #ph-title{color:#1E5B3A!important}
+html body[data-page] #persona-hero #ph-desc,html body[data-page] #persona-hero #ph-back{color:#3E6B54!important}
+html body[data-page] #persona-hero #ph-icon{filter:none}
+/* ===== header + footer match the light mint look ===== */
+html body #navbar{background:linear-gradient(180deg,rgba(241,252,245,.96),rgba(248,253,249,.92))!important;border-bottom:1px solid #DDF3E4!important}
+html body footer{background:linear-gradient(180deg,#EAF9EE 0%,#DDF6E5 100%)!important;border-top:1px solid #CDEED6;border-radius:34px 34px 0 0;box-shadow:0 -18px 36px -34px rgba(0,150,45,.35)}
+html body footer,html body footer p,html body footer span,html body footer a,html body footer .nav-link,html body footer div{color:#3E6B54!important}
+html body footer svg text,html body footer svg{color:#27443A}
+html body footer svg text{fill:#27443A!important}
+html body footer a:hover{color:#12A83B!important}
+html body footer [class*="phone"],html body footer a[href^="tel"],html body footer a[href*="wa.me"]{background:#fff!important;border:1px solid #CDEED6!important;color:#27443A!important;box-shadow:0 8px 18px -14px rgba(0,120,40,.4)}
+html body footer hr,html body footer [class*="divider"]{border-color:#CDEED6!important;background:#CDEED6!important}
+html body footer .ft-bottom,html body footer small{color:#6F9680!important}
+/* day counter: soft green instead of orange */
+html body[data-page="employee"] .ei-daysum .dp b{background:linear-gradient(135deg,#1DBB46,#4BD26F)!important;color:#fff!important;box-shadow:0 3px 8px -4px rgba(0,140,40,.6)}
+html body[data-page="employee"] .ei-daysum .dp.act b,html body[data-page="employee"] .ei-daysum .dp.on b{background:#fff!important;color:#12A83B!important}
+html body[data-page="employee"] .pk-addtile i{color:#1DBB46!important}
+/* price beside the meal name, not on the photo */
+html body[data-page] .dish-name,html body[data-page] .wp-nm{display:flex!important;align-items:flex-start;justify-content:space-between;gap:8px}
+html body[data-page] .nm-t{flex:1;min-width:0}
+html body[data-page] .pr-in{flex:none;background:#EAF9EE;color:#12A83B;font-weight:800;font-size:11.5px;border-radius:99px;padding:3px 9px;white-space:nowrap;margin-top:1px;direction:ltr}
+html body[data-page] .dish-name,html body[data-page] .wp-nm{flex-direction:column!important;align-items:stretch!important;gap:5px}
+html body[data-page] .nm-t{flex:none}
+html body[data-page] .pr-in{align-self:flex-start;margin-top:0}
+/* price: bigger, on the opposite side of the name, bottom corner of the box */
+html body[data-page] .dish-card,html body[data-page] .wp-dish{position:relative}
+html body[data-page] .dish-card .dish-body{padding-bottom:40px!important}
+html body[data-page] .wp-dish{padding-bottom:40px!important}
+html body[data-page] .pr-in{position:absolute!important;bottom:10px;inset-inline-end:10px;inset-inline-start:auto;align-self:auto;font-size:15px!important;padding:5px 13px!important;background:linear-gradient(135deg,#E3F8E9,#D2F3DC)!important;color:#0E9A33!important;box-shadow:0 6px 12px -10px rgba(0,120,40,.6)}
+/* + button faces the price: same bottom row, opposite side */
+html body[data-page] .wp-dish .wp-ph{position:static!important}
+html body[data-page] .dish-card .add-btn,html body[data-page] .wp-dish .pk-add{top:auto!important;bottom:9px!important;inset-inline-start:10px!important;inset-inline-end:auto!important;left:auto!important;right:auto!important;width:34px!important;height:34px!important;font-size:22px!important;z-index:2}
+html body[data-page] .dish-card .add-btn.added{font-size:16px!important}
+/* physical placement: price on the side opposite the name, + facing it on the other side */
+html body[data-page] .pr-in,html body[data-page] .dish-card .add-btn,html body[data-page] .wp-dish .pk-add{inset-inline-start:auto!important;inset-inline-end:auto!important}
+html body[dir="rtl"][data-page] .pr-in{left:10px!important;right:auto!important}
+html body[dir="rtl"][data-page] .dish-card .add-btn,html body[dir="rtl"][data-page] .wp-dish .pk-add{right:10px!important;left:auto!important}
+html body[dir="ltr"][data-page] .pr-in{right:10px!important;left:auto!important}
+html body[dir="ltr"][data-page] .dish-card .add-btn,html body[dir="ltr"][data-page] .wp-dish .pk-add{left:10px!important;right:auto!important}
+/* + back on the photo (top corner), soft frosted look */
+html body[data-page] .wp-dish .wp-ph{position:relative!important}
+html body[dir] [data-page] .dish-card .add-btn,html body[data-page] .dish-card .add-btn,html body[data-page] .wp-dish .pk-add{top:8px!important;bottom:auto!important;width:30px!important;height:30px!important;font-size:20px!important;font-weight:700!important;color:#12A83B!important;background:rgba(255,255,255,.82)!important;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.9)!important;box-shadow:0 6px 14px -8px rgba(0,60,20,.45)!important;padding:0!important}
+html body[dir="rtl"][data-page] .dish-card .add-btn,html body[dir="rtl"][data-page] .wp-dish .pk-add{left:8px!important;right:auto!important}
+html body[dir="ltr"][data-page] .dish-card .add-btn,html body[dir="ltr"][data-page] .wp-dish .pk-add{right:8px!important;left:auto!important}
+html body[data-page] .dish-card .add-btn.added{background:linear-gradient(135deg,#1DBB46,#4BD26F)!important;color:#fff!important;font-size:14px!important}
+html body[data-page] .dish-card .add-btn:active,html body[data-page] .wp-dish .pk-add:active{transform:scale(.9)}
+/* ===== first popup (welcome) — refined ===== */
+html body #welcome-overlay{background:rgba(10,38,26,.58)!important;backdrop-filter:blur(10px)!important;-webkit-backdrop-filter:blur(10px)!important}
+html body #welcome-box{max-width:430px!important;border-radius:28px!important;padding:16px 16px 14px!important;background:linear-gradient(180deg,#fff 0%,#F3FBF6 100%)!important;box-shadow:0 30px 70px -20px rgba(0,60,25,.45)!important;animation:wlIn .55s cubic-bezier(.2,.9,.25,1) both!important}
+@keyframes wlIn{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:none}}
+.wl-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+html body .wl-langs,html body .wl-themes{margin:0!important;display:inline-flex!important;gap:0!important;background:#E8F5EC;border-radius:99px;padding:3px}
+html body .wl-langs button,html body .wl-themes button{border:0!important;background:transparent!important;border-radius:99px!important;padding:5px 12px!important;font-size:12px!important;font-weight:700!important;color:#2d5a43!important;transition:background .25s,color .25s,box-shadow .25s}
+html body .wl-langs button.on,html body .wl-themes button.on{background:#fff!important;color:#12A83B!important;box-shadow:0 2px 8px -3px rgba(0,80,30,.35)!important}
+.wl-logo{display:block;margin:2px auto 0;border-radius:14px;box-shadow:0 8px 18px -10px rgba(0,120,40,.6)}
+html body #welcome-title{font-size:20px!important;margin:8px 0 3px!important;color:#1E4A34!important}
+html body #welcome-sub{font-size:12.5px!important;color:#5a7a69!important;margin:0 0 12px!important}
+html body .wl-cards{gap:10px!important}
+html body .wl-card{padding:0!important;overflow:hidden;border:1px solid #d3eadb!important;background:#fff!important;border-radius:20px!important;gap:0!important;box-shadow:0 10px 22px -16px rgba(0,80,30,.45);transition:transform .25s,box-shadow .25s,border-color .25s;animation:wlC .6s cubic-bezier(.2,.9,.25,1) both}
+.wl-card:nth-child(1){animation-delay:.08s}.wl-card:nth-child(2){animation-delay:.14s}.wl-card:nth-child(3){animation-delay:.2s}.wl-card:nth-child(4){animation-delay:.26s}
+@keyframes wlC{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+html body .wl-card:hover,html body .wl-card:active{transform:translateY(-2px) scale(.985)!important;border-color:#12A83B!important;box-shadow:0 16px 28px -16px rgba(0,120,40,.55)}
+.wl-ph{position:relative;display:block;width:100%;height:74px;overflow:hidden}
+.wl-ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.wl-card:hover .wl-ph img{transform:scale(1.06)}
+.wl-ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,40,15,.35))}
+html body .wl-ph .wl-e{position:absolute;z-index:1;bottom:6px;inset-inline-start:8px;font-style:normal;font-size:18px!important;background:rgba(255,255,255,.88);backdrop-filter:blur(6px);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center}
+html body .wl-card b{font-size:14.5px!important;margin:9px 8px 1px;color:#1E4A34}
+html body .wl-card small{font-size:11px!important;margin:0 8px 11px;color:#6b8a79!important;line-height:1.4}
+.wl-trust{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 12px;margin-top:12px;font-size:11px;color:#4f7a63;font-weight:600}
+html body .wl-skip{margin-top:8px!important;color:#7b9a89!important;font-size:12px!important}
+#wl-greet{font-size:12px;font-weight:700;color:#12A83B;margin-top:8px}
+html body #wl-greet+#welcome-title{margin-top:2px!important}
+.wl-from{display:inline-block;margin:-4px 8px 11px;font-style:normal;font-size:10.5px;font-weight:800;color:#12A83B;background:#E6F6EB;border-radius:99px;padding:2px 9px;align-self:center}
+html body .wl-card:focus-visible{outline:3px solid #12A83B;outline-offset:2px}
+html body .wl-card small{margin-bottom:6px!important}
+html body #welcome-box:focus{outline:none}

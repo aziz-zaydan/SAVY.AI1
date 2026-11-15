@@ -1,0 +1,101 @@
+/* sportif / famille / couple share the employee layout, each with its own colour */
+body[data-page="sportif"]{--pc1:#0284C7;--pc2:#38BDF8;--pcd:#0C4A6E}
+body[data-page="famille"]{--pc1:#009B29;--pc2:#00B02C;--pcd:#005C18}
+body[data-page="couple"]{--pc1:#B7791F;--pc2:#F5B73B;--pcd:#78350F}
+body[data-page="famille"],body[data-page="couple"]{--hero-bg:linear-gradient(135deg,var(--pc1),var(--pc2));--hero-fg:#fff;--hero-fg2:rgba(255,255,255,.88);--chip-bg:rgba(255,255,255,.18);--chip-bd:rgba(255,255,255,.5)}
+body[data-page="famille"] .ps-chip.on,body[data-page="couple"] .ps-chip.on{background:#fff!important;color:var(--pc1)!important}
+body[data-page="famille"] #persona-hero,body[data-page="couple"] #persona-hero{background:var(--hero-bg)!important}
+/* compact hero */
+body[data-page="famille"] .hx-visual,body[data-page="couple"] .hx-visual,
+body[data-page="famille"] #ph-btn,body[data-page="couple"] #ph-btn{display:none!important}
+body[data-page="famille"] #persona-hero,body[data-page="couple"] #persona-hero{padding-bottom:14px!important}
+body[data-page="sportif"] #menu,body[data-page="famille"] #menu,body[data-page="couple"] #menu{padding-top:8px!important}
+body[data-page="sportif"] #menu .section-header,body[data-page="famille"] #menu .section-header,body[data-page="couple"] #menu .section-header{display:none!important}
+/* coloured intro box (the plan card) */
+body[data-page="sportif"] #persona-plan,body[data-page="famille"] #persona-plan,body[data-page="couple"] #persona-plan{background:linear-gradient(135deg,var(--pc1),var(--pc2))!important;border:0!important;color:#fff!important;border-radius:22px!important;padding:14px!important;box-shadow:0 14px 30px -20px var(--pc1)}
+#persona-plan .pp-title,#persona-plan .pp-sub,#persona-plan .pp-stat,#persona-plan .pp-total,#persona-plan .pp-row,#persona-plan .pp-row *{color:#fff!important}
+#persona-plan .pp-sub{opacity:.9}
+#persona-plan .pp-chips button,#persona-plan .pp-row .q button{background:rgba(255,255,255,.2)!important;color:#fff!important;border:1.5px solid rgba(255,255,255,.55)!important;border-radius:99px;font-weight:800}
+#persona-plan .pp-chips button.on{background:#fff!important;color:var(--pc1)!important;border-color:#fff!important}
+#persona-plan .pp-bar{background:rgba(255,255,255,.3)!important}
+#persona-plan .pp-bar i{background:#fff!important}
+#persona-plan .pp-row{border-color:rgba(255,255,255,.3)!important}
+/* white soft card around filters + meals */
+.pp-card{background:#fff;border-radius:26px;padding:14px 12px 12px;box-shadow:0 18px 40px -26px rgba(15,23,42,.45);border:1px solid rgba(15,23,42,.06)}
+.pp-card .filter-row{margin-top:0}
+body[data-page="sportif"] .mv-bar button.on,body[data-page="famille"] .mv-bar button.on,body[data-page="couple"] .mv-bar button.on{background:var(--pc1)!important;color:#fff!important;border-color:var(--pc1)!important}
+body[data-page="sportif"] #diet-filters .filter-btn.active,body[data-page="famille"] #diet-filters .filter-btn.active,body[data-page="couple"] #diet-filters .filter-btn.active,
+body[data-page="sportif"] #diet-filters .on,body[data-page="famille"] #diet-filters .on,body[data-page="couple"] #diet-filters .on{background:var(--pc1)!important;color:#fff!important;border-color:var(--pc1)!important}
+body[data-page="famille"] #mobile-order-bar,body[data-page="couple"] #mobile-order-bar{background:var(--pc1)!important}
+body[data-page="famille"] #mobile-order-bar .mob-bar-btn,body[data-page="couple"] #mobile-order-bar .mob-bar-btn{background:#fff!important;color:var(--pc1)!important}
+body[data-page="sportif"] #mobile-order-bar{background:var(--pc1)!important}
+body[data-page="sportif"] #mobile-order-bar .mob-bar-btn{background:#fff!important;color:var(--pc1)!important}
+body[data-page="famille"] .section-title,body[data-page="couple"] .section-title,body[data-page="famille"] .dish-name,body[data-page="couple"] .dish-name{color:var(--pcd)!important}
+/* small chat button + search/cuisine hidden on all three */
+body[data-page="famille"] .fab-main-badge,body[data-page="couple"] .fab-main-badge,body[data-page="famille"] .fab-savy-badge,body[data-page="couple"] .fab-savy-badge{display:none!important}
+body[data-page="famille"] #fab-main-wrap,body[data-page="couple"] #fab-main-wrap{width:36px!important;height:36px!important;bottom:92px!important}
+body[data-page="famille"] #fab-main,body[data-page="couple"] #fab-main{width:36px!important;height:36px!important}
+body[data-page="famille"] #fab-main svg,body[data-page="couple"] #fab-main svg{width:22px!important;height:22px!important}
+body[data-page="famille"] .search-wrap,body[data-page="couple"] .search-wrap,body[data-page="famille"] #cuisine-tabs,body[data-page="couple"] #cuisine-tabs,
+body[data-page="famille"] #persona-tabs-label,body[data-page="couple"] #persona-tabs-label,body[data-page="famille"] #delivery-badge,body[data-page="couple"] #delivery-badge,
+body[data-page="famille"] #cart-bar,body[data-page="couple"] #cart-bar{display:none!important}
+#persona-plan .pp-slot{background:rgba(255,255,255,.18)!important;border:1.5px solid rgba(255,255,255,.5)!important;color:#fff!important;border-radius:16px}
+#persona-plan .pp-slot *{color:#fff!important}
+#persona-plan .pp-slot.active{background:#fff!important;border-color:#fff!important}
+#persona-plan .pp-slot.active *{color:var(--pc1)!important}
+body[data-page="famille"] nav .btn-cta,body[data-page="couple"] nav .btn-cta{background:var(--pc1)!important;color:#fff!important}
+body[data-page="famille"] #persona-hero .ph-wrap,body[data-page="couple"] #persona-hero .ph-wrap{max-width:100%;box-sizing:border-box}
+body[data-page="couple"] #ph-desc{overflow-wrap:anywhere}
+/* menu cards identical to the employee picker */
+body[data-page="sportif"] .dish-card,body[data-page="famille"] .dish-card,body[data-page="couple"] .dish-card{border-radius:22px!important;border:1px solid rgba(15,23,42,.05)!important;box-shadow:0 10px 24px -18px rgba(15,23,42,.4)!important;overflow:hidden;background:#fff!important}
+body[data-page="sportif"] .dish-card .dish-photo,body[data-page="famille"] .dish-card .dish-photo,body[data-page="couple"] .dish-card .dish-photo{height:auto!important;aspect-ratio:5/3}
+body[data-page="sportif"] .dish-card .add-btn,body[data-page="famille"] .dish-card .add-btn,body[data-page="couple"] .dish-card .add-btn{top:8px!important;inset-inline-end:8px!important;inset-inline-start:auto!important;width:34px!important;height:34px!important;font-size:22px!important;border:0!important;background:var(--accent)!important;color:var(--accent-fg)!important;box-shadow:0 6px 14px -6px rgba(0,0,0,.45)!important}
+body[data-page="sportif"] .dish-card .add-btn.added,body[data-page="famille"] .dish-card .add-btn.added,body[data-page="couple"] .dish-card .add-btn.added{background:#00B02C!important;color:#fff!important;font-size:17px!important}
+body[data-page="sportif"] .dish-card .ms-i,body[data-page="famille"] .dish-card .ms-i,body[data-page="couple"] .dish-card .ms-i{top:8px!important;bottom:auto!important;inset-inline-start:8px!important;inset-inline-end:auto!important;left:auto!important;right:auto!important;width:30px!important;height:30px!important}
+body[data-page="sportif"] .dish-price-float,body[data-page="famille"] .dish-price-float,body[data-page="couple"] .dish-price-float{top:auto!important;bottom:8px!important;inset-inline-start:auto!important;inset-inline-end:8px!important;left:auto!important;right:auto!important}
+body[data-page="sportif"] .dish-badge-float,body[data-page="famille"] .dish-badge-float,body[data-page="couple"] .dish-badge-float{bottom:8px!important;inset-inline-start:8px!important;inset-inline-end:auto!important;left:auto!important;right:auto!important}
+body[data-page="sportif"] .dish-name,body[data-page="famille"] .dish-name,body[data-page="couple"] .dish-name{font-size:14px!important;min-height:0!important;padding:8px 10px 0!important}
+body[data-page="sportif"] .dish-body,body[data-page="famille"] .dish-body,body[data-page="couple"] .dish-body{padding:0 0 10px!important}
+body[data-page="sportif"] .dish-macros,body[data-page="famille"] .dish-macros,body[data-page="couple"] .dish-macros{padding:2px 10px 0;margin-top:2px!important;gap:8px!important}
+body[data-page="sportif"] .dish-macros>span,body[data-page="famille"] .dish-macros>span,body[data-page="couple"] .dish-macros>span{background:none!important;padding:0!important;color:#64748B!important;font-size:11px!important;font-weight:600!important}
+body[data-page="sportif"] .dish-card .dish-photo,body[data-page="famille"] .dish-card .dish-photo,body[data-page="couple"] .dish-card .dish-photo{height:96px!important;aspect-ratio:auto!important}
+body[data-page="sportif"] .dish-price-float,body[data-page="famille"] .dish-price-float,body[data-page="couple"] .dish-price-float{transform:none!important;width:auto!important}
+body[data-page="sportif"] .dish-more,body[data-page="famille"] .dish-more,body[data-page="couple"] .dish-more{display:none!important}
+body[data-page="sportif"] .dish-macros,body[data-page="famille"] .dish-macros,body[data-page="couple"] .dish-macros{flex-wrap:wrap}
+body[data-page="sportif"] .dish-price-float,body[data-page="famille"] .dish-price-float,body[data-page="couple"] .dish-price-float,
+body[data-page="sportif"] .dish-badge-float,body[data-page="famille"] .dish-badge-float,body[data-page="couple"] .dish-badge-float{position:absolute!important;margin:0!important}
+body[data-page="sportif"] .dish-price-float,body[data-page="famille"] .dish-price-float,body[data-page="couple"] .dish-price-float{inset-inline-end:8px!important;inset-inline-start:auto!important;top:auto!important;bottom:8px!important}
+body[data-page="sportif"] .dish-badge-float,body[data-page="famille"] .dish-badge-float,body[data-page="couple"] .dish-badge-float{inset-inline-start:8px!important;inset-inline-end:auto!important;top:auto!important;bottom:8px!important}
+.pp-sort{display:flex;gap:6px;margin:0 0 8px;overflow-x:auto}
+.pp-sort button{flex:none;border:1.5px solid #E8EDF3;background:#fff;color:var(--pcd);border-radius:99px;padding:6px 12px;font-size:12px;font-weight:700;cursor:pointer;transition:background .2s,color .2s}
+.pp-sort button.on{background:var(--pc1);border-color:var(--pc1);color:#fff}
+.pp-sort .mv-bar{margin:0!important;margin-inline-start:auto!important;flex:none;padding:0!important;background:none!important;display:flex;gap:6px}
+.pp-sort{align-items:center;flex-wrap:nowrap}
+.pp-sort button{padding:6px 10px}.pp-sort .mv-bar button{padding:6px 10px!important}
+body[data-page="sportif"] .dish-card .ms-i,body[data-page="famille"] .dish-card .ms-i,body[data-page="couple"] .dish-card .ms-i{width:30px!important;height:30px!important;border-radius:50%!important;border:none!important;background:rgba(255,255,255,.92)!important;font-size:14px!important;font-weight:400!important;color:#000!important;padding:0!important;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.25)!important}
+body[data-page="sportif"] .dish-card .ms-i,body[data-page="famille"] .dish-card .ms-i,body[data-page="couple"] .dish-card .ms-i{inset-inline-start:8px!important;inset-inline-end:auto!important;top:8px!important}
+body[data-page="sportif"] .dish-card .add-btn,body[data-page="famille"] .dish-card .add-btn,body[data-page="couple"] .dish-card .add-btn{font-weight:900!important}
+/* ONE brand colour (navy) for actions on all pages; page colour only on hero + intro box */
+body[data-page]{--brand:#00B02C}
+body[data-page="sportif"] .mv-bar button.on,body[data-page="famille"] .mv-bar button.on,body[data-page="couple"] .mv-bar button.on,
+body[data-page="sportif"] #diet-filters .on,body[data-page="famille"] #diet-filters .on,body[data-page="couple"] #diet-filters .on,
+body[data-page="sportif"] #diet-filters .filter-btn.active,body[data-page="famille"] #diet-filters .filter-btn.active,body[data-page="couple"] #diet-filters .filter-btn.active,
+.pp-sort button.on{background:var(--brand)!important;border-color:var(--brand)!important;color:#fff!important}
+body[data-page="sportif"] #mobile-order-bar,body[data-page="famille"] #mobile-order-bar,body[data-page="couple"] #mobile-order-bar{background:var(--brand)!important}
+body[data-page="sportif"] #mobile-order-bar .mob-bar-btn,body[data-page="famille"] #mobile-order-bar .mob-bar-btn,body[data-page="couple"] #mobile-order-bar .mob-bar-btn{background:#FFB547!important;color:var(--brand)!important}
+body[data-page="sportif"] nav .btn-cta,body[data-page="famille"] nav .btn-cta,body[data-page="couple"] nav .btn-cta,
+body[data-page="sportif"] nav .btn-cta-sm,body[data-page="famille"] nav .btn-cta-sm,body[data-page="couple"] nav .btn-cta-sm{background:var(--brand)!important;color:#fff!important}
+body[data-page="sportif"] .dish-card .add-btn,body[data-page="famille"] .dish-card .add-btn,body[data-page="couple"] .dish-card .add-btn{background:#FFB547!important;color:var(--brand)!important}
+body[data-page="sportif"] .section-title,body[data-page="famille"] .section-title,body[data-page="couple"] .section-title,
+body[data-page="sportif"] .dish-name,body[data-page="famille"] .dish-name,body[data-page="couple"] .dish-name,.pp-sort button{color:var(--brand)!important}
+.pp-sort button.on{color:#fff!important}
+body[data-page="sportif"] .btn-cta,body[data-page="famille"] .btn-cta,body[data-page="couple"] .btn-cta{background:var(--brand)!important;color:#fff!important}
+body[data-page="sportif"],body[data-page="famille"],body[data-page="couple"]{--ink:#00B02C}
+/* family teal everywhere */
+body[data-page="sportif"],body[data-page="couple"]{--pc1:#009B29;--pc2:#00B02C;--pcd:#005C18}
+body[data-page="sportif"]{--hero-bg:linear-gradient(135deg,var(--pc1),var(--pc2));--hero-fg:#fff;--hero-fg2:rgba(255,255,255,.88);--chip-bg:rgba(255,255,255,.18);--chip-bd:rgba(255,255,255,.5)}
+body[data-page="sportif"] .ps-chip.on{background:#fff!important;color:var(--pc1)!important}
+body[data-page="sportif"] #persona-hero{background:var(--hero-bg)!important}
+body[data-page="sportif"] #sp-calc-btn{border-color:#00B02C;background:#E8F9EC;color:#005C18}
+body[data-page="sportif"] #sp-calc-btn.done{background:#00B02C;color:#fff}
+#fab-main{background:#00B02C!important}

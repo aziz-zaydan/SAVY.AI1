@@ -1,0 +1,19 @@
+#sx-social{display:flex;align-items:center;padding:0;background:none;border:0;flex-shrink:0}
+#sx-social .sc-t{font-size:12px;font-weight:700;color:#5a7a69}
+#sx-social .sc-i{display:flex;gap:5px}
+#navbar #sx-social a{display:flex!important;width:36px;height:36px;border-radius:50%;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--border);box-shadow:0 1px 3px rgba(0,60,30,.08);transition:transform .18s,border-color .18s,box-shadow .18s}
+#navbar #sx-social a svg{width:19px;height:19px}
+#navbar #sx-social a:hover{transform:translateY(-1px);box-shadow:0 3px 8px rgba(0,60,30,.16)}
+#navbar #sx-social a:active{transform:scale(.92)}
+#navbar #sx-social .sc-instagram{color:#E1306C}
+#navbar #sx-social .sc-tiktok{color:#111}
+#navbar #sx-social .sc-facebook{color:#1877F2}
+#navbar #sx-social .sc-whatsapp{color:#25D366}
+#navbar #theme-btn{width:36px!important;height:36px!important;font-size:16px!important;box-shadow:0 1px 3px rgba(0,60,30,.08)}
+#navbar .btn-cta-sm{display:none!important}
+#sx-social a:focus-visible{outline:2px solid #1E7A45;outline-offset:2px}
+@media(max-width:340px){#navbar #sx-social a,#navbar #theme-btn{width:31px!important;height:31px!important}#navbar #sx-social a svg{width:16px;height:16px}#sx-social .sc-i{gap:4px}}
+#navbar{display:flex!important;align-items:center;justify-content:space-between;gap:6px}
+#navbar>.nav-links{display:none!important}
+#navbar>div:not(#sx-social):not(.nav-links):last-of-type{margin-inline:auto}
+@media(max-width:340px){#navbar{gap:3px}#navbar #sx-social a{width:28px!important;height:28px!important}#navbar #theme-btn{width:28px!important;height:28px!important}}

@@ -1,0 +1,53 @@
+/* ═══ HOME — who are you ordering for ═══ */
+.hero3{padding:92px 16px 26px;background:radial-gradient(120% 60% at 100% 0%,#FFF1D6 0%,transparent 60%),radial-gradient(90% 50% at 0% 30%,#DDF3EA 0%,transparent 60%),#fff}
+.hero3 .h2-copy{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.hero3 .hero-title{font-size:clamp(30px,8.5vw,44px);line-height:1.15}
+.ht-q{font-size:15px;font-weight:800;color:#0B2A24;margin-top:6px}
+.ht-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ht{position:relative;display:flex;flex-direction:column;border-radius:20px;overflow:hidden;text-decoration:none;color:#fff;min-height:200px;box-shadow:0 14px 28px -16px rgba(0,0,0,.55);transition:transform .18s}
+.ht:active{transform:scale(.97)}
+.ht-ph{display:block;height:112px;overflow:hidden}
+.ht-ph img{width:100%;height:100%;object-fit:cover;object-position:50% 75%;display:block}
+.ht-tx{display:flex;flex-direction:column;gap:3px;padding:10px 12px 12px;flex:1}
+.ht-t{font-size:16px;font-weight:800;line-height:1.2}
+.ht-d{font-size:11.5px;line-height:1.4;opacity:.85;font-weight:500}
+.ht-go{position:absolute;top:10px;inset-inline-end:10px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.92);color:#0B2A24;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:18px;font-weight:900}
+[dir="ltr"] .ht-go{transform:scaleX(-1)}
+.ht-employee{background:#13294B}.ht-employee .ht-t{color:#F59E0B}
+.ht-sportif{background:#111}.ht-sportif .ht-t{color:#FBBF24}
+.ht-famille{background:#0F766E}.ht-famille .ht-t{color:#FDBA74}
+.ht-couple{background:#6B1D3A}.ht-couple .ht-t{color:#E8C27A}
+.hero3 .hero-trust{text-align:center;font-size:12.5px;color:#475569;margin-top:2px}
+@media(min-width:700px){.ht-grid{grid-template-columns:repeat(4,1fr)}.hero3 .h2-copy{max-width:900px}}
+/* photo-led tiles */
+.ht{min-height:230px;background:var(--c)!important}
+.ht-employee{--c:#13294B}.ht-sportif{--c:#111}.ht-famille{--c:#0F766E}.ht-couple{--c:#6B1D3A}
+.ht-ph{position:absolute;inset:0;height:auto}
+.ht-tx{position:absolute;inset-inline:0;bottom:0;padding:46px 12px 12px;background:linear-gradient(to top,var(--c) 18%,transparent)}
+.ht-t{font-size:18px}
+.ht-d{opacity:.92}
+/* ribbon */
+.ht-ribbon{overflow:hidden;margin:0 -16px 6px;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.ht-rib{display:flex;gap:10px;width:max-content;animation:htrib 60s linear infinite}
+.ht-rib img{width:74px;height:74px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 6px 14px -6px rgba(0,0,0,.4)}
+@keyframes htrib{to{transform:translateX(-50%)}}
+[dir="rtl"] .ht-rib{animation-name:htribr}
+@keyframes htribr{to{transform:translateX(50%)}}
+@media(prefers-reduced-motion:reduce){.ht-rib{animation:none}}
+/* dishes carousel */
+#ht-dishes{padding:26px 0 10px;background:#fff}
+#ht-dishes h2{font-size:22px;font-weight:800;color:#0B2A24;padding:0 16px;margin:0 0 4px}
+#ht-dishes p{font-size:13px;color:#64748B;padding:0 16px;margin:0 0 12px}
+.hd-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 16px 14px;scrollbar-width:none}
+.hd-row::-webkit-scrollbar{display:none}
+.hd{flex:none;width:150px;scroll-snap-align:start;border:none;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 10px 24px -14px rgba(11,42,36,.5);text-align:start;cursor:pointer;padding:0}
+.hd img{width:100%;height:112px;object-fit:cover;display:block}
+.hd b{display:block;font-size:13px;line-height:1.3;color:#0B2A24;padding:8px 10px 2px;min-height:44px}
+.hd span{display:block;padding:0 10px 10px;font-size:12.5px;font-weight:800;color:#B45309}
+.hero3,.hero3 .h2-copy{min-width:0;max-width:100%;overflow-x:clip}
+.hero3 .h2-copy>*{min-width:0;max-width:100%}
+.ht-ribbon{width:calc(100% + 32px);max-width:none;contain:paint}
+.hero3 .h2-copy{max-width:520px}
+.hero3{display:block!important}
+.hero3 .h2-copy{width:100%;box-sizing:border-box;margin-inline:auto}
+.ht-grid,.ht-ribbon,.ht-q{align-self:stretch;width:100%}.ht-ribbon{width:calc(100% + 32px);margin-inline:-16px}
