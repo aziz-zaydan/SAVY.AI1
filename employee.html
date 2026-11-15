@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><script>try{if(sessionStorage.getItem("savy_theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#1FB655"><link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, interactive-widget=resizes-content"/>
+  <title>SAVY Employés — Repas frais livrés au bureau | Tétouan · M'diq · Martil</title>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SAVY Employés — Repas frais livrés au bureau | Tétouan · M'diq · Martil">
+  <meta property="og:description" content="Commandez votre semaine de repas équilibrés, livrés au bureau à Tétouan, M'diq et Martil. Cash à la livraison, commande sur WhatsApp.">
+  <meta property="og:image" content="https://savy.netlify.app/og-image.jpg">
+  <meta property="og:url" content="https://savy.netlify.app/employee.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Analytics: ضع معرّف GA4 بدل G-XXXXXXXXXX لتفعيل الإحصائيات -->
+  <script>window.GA_ID="G-XXXXXXXXXX";if(!/XXXX/.test(window.GA_ID)){var gs=document.createElement("script");gs.async=1;gs.src="https://www.googletagmanager.com/gtag/js?id="+window.GA_ID;document.head.appendChild(gs);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config",window.GA_ID);}</script>
+  <meta name="description" content="Commandez votre semaine de repas équilibrés, livrés au bureau à Tétouan, M'diq et Martil. Cash à la livraison, commande sur WhatsApp."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Baloo+Bhaijaan+2:wght@600;800&family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/2ffc075f56.css"><link rel="stylesheet" href="assets/20cbe81a06.css"><link rel="stylesheet" href="assets/f1f7c425b6.css"><style>body[data-page="employee"] { --ink:#0C1B4D; --green:#00B02C; --greenL:#00B02C; --greenXL:#E6F8EA; --mint:#E6F8EA; --bg:#F3F5FC; --accent:#FFB547; --accent-fg:#0C1B4D; --hero-bg:linear-gradient(160deg,#0C1B4D 0%,#1E3A9E 100%); --hero-fg:#fff; --hero-fg2:rgba(255,255,255,.82); --chip-bg:rgba(255,255,255,.12); --chip-bd:rgba(255,255,255,.25); --fc-bg:rgba(255,255,255,.96); --fc-fg:#0C1B4D; --fd:'Readex Pro','Tajawal',sans-serif; }
+body[data-page="employee"] .hx-visual img { aspect-ratio:1/1; border-radius:32px 32px 32px 90px; box-shadow:0 30px 60px -24px rgba(0,0,0,.6); }
+body[data-page="employee"] .fc1 { top:14px; inset-inline-start:-6px; }
+body[data-page="employee"] .fc2 { bottom:62px; inset-inline-end:-6px; }
+body[data-page="employee"] .fc3 { bottom:-12px; inset-inline-start:14px; background:#FFB547; color:#0C1B4D; }
+body[data-page="employee"] #persona-hero::after { content:""; position:absolute; width:340px; height:340px; border-radius:50%; background:radial-gradient(closest-side,rgba(255,181,71,.28),transparent); top:-90px; inset-inline-end:-90px; pointer-events:none; }
+</style>
+</head>
+<body data-page="employee">
+
+<!-- ══ URGENCY STRIP ════════════════════════════════════ -->
+<div id="urgency-strip">
+  <div id="urgency-inner">
+    <span id="urgency-fire">🔥</span>
+    <span id="urgency-txt">12 personnes ont commandé aujourd'hui à Tétouan</span>
+    <span id="urgency-sep">·</span>
+    <span id="urgency-slots">Dernière livraison à 21h — <strong>3 créneaux restants</strong></span>
+  </div>
+</div>
+
+<!-- ══ BANNER ══════════════════════════════════════════ -->
+
+<!-- ══ NAVBAR ══════════════════════════════════════════ -->
+<nav id="navbar">
+  <!-- Center: SAVY logo -->
+  <div style="display:flex;justify-content:center;align-items:center;">
+    <a href="#" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+      <img src="img/logo.webp" width="42" height="42" alt="SAVY" style="border-radius:12px;display:block">
+    </a>
+  </div>
+  <div class="nav-links" style="display:none;">
+    <a href="#menu"  class="nav-link" id="nl-menu">Menu</a>
+    <a href="#how"   class="nav-link" id="nl-how">Comment ça marche</a>
+    <a href="#final" class="nav-link" id="nl-about">À propos</a>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;justify-content:flex-end;">
+    <button class="nav-track-btn" id="nav-track-btn" onclick="scrollToTracking()" style="display:none;">
+      <span class="nav-track-dot"></span>
+      <span id="nav-track-lbl">Suivre ma commande</span>
+    </button>
+    <div style="display:flex;gap:6px;align-items:center;">
+      <a href="https://www.instagram.com/savy.mar?igsh=MWdzNjNkeWZ0NW93Zw==" target="_blank" rel="noopener"
+         style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;border:1px solid var(--border);background:var(--card);font-size:12px;text-decoration:none;transition:all .2s;"
+         onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'"><img src="img/asset-1.jpg" alt="Instagram" style="width:18px;height:18px;border-radius:50%;object-fit:cover;"></a>
+      <a href="https://www.tiktok.com/@savy.ma?_r=1&_t=ZS-94R6uvkwfhN" target="_blank" rel="noopener"
+         style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;border:1px solid var(--border);background:var(--card);font-size:12px;text-decoration:none;transition:all .2s;"
+         onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'"><img src="img/asset-2.jpg" alt="TikTok" style="width:18px;height:18px;border-radius:50%;object-fit:cover;"></a>
+    </div>
+    <div class="lang-wrap">
+      <button class="lang-btn"        onclick="setLang('en')">🇬🇧 EN</button>
+      <button class="lang-btn"        onclick="setLang('fr')">🇫🇷 FR</button>
+      <button class="lang-btn active" onclick="setLang('ar')">عربية</button>
+    </div>
+    <button id="theme-btn" onclick="toggleTheme()"
+      style="width:28px;height:28px;border-radius:50%;border:1px solid var(--border);background:var(--card);cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;"
+      onmouseover="this.style.borderColor='var(--green)'" onmouseout="this.style.borderColor='var(--border)'">
+      🌙
+    </button>
+    <button class="btn-cta btn-cta-sm" onclick="openChat()">
+      <span id="nav-cta">Commander</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ══ HERO ════════════════════════════════════════════ -->
+<section id="persona-hero" class="hx hx-employee">
+  <div class="ph-wrap">
+    <div class="hx-top"><div><a class="ph-back" href="index.html?choose=1" id="ph-back">←</a></div><div class="ph-switch"><a class="ps-chip on" href="employee.html" id="ps-employee"><span>💼</span> <b id="ps-employee-lbl">Employé(e)</b></a><a class="ps-chip" href="sportif.html" id="ps-sportif"><span>🏋️</span> <b id="ps-sportif-lbl">Sportif(ve)</b></a><a class="ps-chip" href="famille.html" id="ps-famille"><span>👨‍👩‍👧</span> <b id="ps-famille-lbl">Famille</b></a><a class="ps-chip" href="couple.html" id="ps-couple"><span>💑</span> <b id="ps-couple-lbl">Couple</b></a></div></div>
+    <div id="persona-highlight">
+      <div id="ph-icon">💼</div>
+      <h1 id="ph-title" style="margin:0"></h1>
+      <div id="ph-desc"></div>
+      <button onclick="openChat()" id="ph-btn">🧬</button>
+    </div>
+    <div class="hx-visual"><img src="img/cat-employee.webp" alt=""><span class="fc fc1" id="fc1"></span><span class="fc fc2" id="fc2"></span><span class="fc fc3" id="fc3"></span></div>
+  </div>
+</section>
+<section id="menu">
+  <div class="menu-inner">
+    <div class="section-header">
+      <h2 class="section-title fh" id="menu-title">Notre Menu</h2>
+      <p style="color:var(--sub);font-size:14px;margin-top:6px;" id="menu-sub">Des saveurs du monde, optimisées par l'IA pour vos objectifs</p>
+      <div class="title-bar" style="margin-top:10px;"></div>
+      <!-- Local Delivery Badge -->
+      <div class="delivery-badge" id="delivery-badge">
+        <span class="delivery-icon">🛵</span>
+        <span id="delivery-text">Livraison locale · Tétouan · Martil · M'diq · 45 min · Cash ou Carte</span>
+      </div>
+    </div>
+    <div class="search-wrap">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FBFAA" stroke-width="2" stroke-linecap="round">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input class="search-inp" id="search" placeholder="Rechercher des plats..." oninput="renderDishes()"/>
+    </div>
+    <!-- Persona Tabs -->
+    <div class="persona-tabs-label" id="persona-tabs-label">Je cherche pour :</div>
+    <div class="filter-row" id="cuisine-tabs"></div>
+    <div class="filter-row" id="diet-filters" style="margin-bottom:6px;"></div>
+    <div id="persona-plan" style="display:none;"></div>
+    <div id="weekly-plan" style="display:none;"></div>
+    <div class="cart-bar" id="cart-bar" style="display:none;">
+      <div style="display:flex;flex-direction:column;gap:2px;">
+        <span id="cart-txt">0 plat sélectionné</span>
+        <span id="cart-total" style="color:#fff;font-size:16px;font-weight:900;font-family:'Readex Pro',sans-serif;letter-spacing:.02em;"></span>
+      </div>
+      <button onclick="openWhatsApp()" id="order-btn">💬 Commander sur WhatsApp</button>
+    </div>
+    <div class="menu-slider-wrap">
+      <button class="menu-arrow menu-arrow-prev" id="menu-prev" onclick="menuSlide(-1)">‹</button>
+      <div class="dishes" id="dishes-list"></div>
+      <button class="menu-arrow menu-arrow-next" id="menu-next" onclick="menuSlide(1)">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CUSTOMER REVIEWS ═════════════════════════════════════ -->
+<!-- ══ CUSTOMER REVIEWS ═════════════════════════════════════ -->
+<div id="menu-cta-nudge" style="text-align:center;padding:18px 16px 6px;background:var(--bg);">
+  <button onclick="openWhatsApp()" style="
+    background:linear-gradient(135deg,var(--green),var(--greenL));
+    color:#fff;border:none;border-radius:99px;
+    padding:12px 28px;font-size:13px;font-weight:700;
+    cursor:pointer;font-family:'IBM Plex Sans Arabic',sans-serif;
+    box-shadow:0 6px 20px rgba(0,176,44,.25);
+    display:inline-flex;align-items:center;gap:8px;
+    transition:transform .2s,box-shadow .2s;
+  " onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 28px rgba(0,176,44,.35)'"
+     onmouseout="this.style.transform='';this.style.boxShadow='0 6px 20px rgba(0,176,44,.25)'">
+    🛵 <span id="menu-nudge-txt">Commander maintenant</span>
+  </button>
+  <p style="font-size:11px;color:var(--muted);margin-top:8px;" id="menu-nudge-sub">🛵 Livraison 45 min</p>
+</div>
+
+<section id="order-track-section" style="display:none;">
+  <div class="ots-inner">
+    <!-- Header -->
+    <div class="ots-header">
+      <span class="wwd-eyebrow" id="ots-eyebrow">🛵 Suivi en direct</span>
+      <h2 class="loy-heading" id="ots-title" style="font-size:16px;">Commande <span class="ots-order-id">#SAVY-0042</span></h2>
+    </div>
+
+    <!-- Two columns: steps + ETA -->
+    <div class="ots-body">
+      <!-- Steps timeline -->
+      <div class="ots-steps" id="ots-steps">
+        <div class="ots-step ots-done">
+          <div class="ots-dot">✓</div>
+          <div class="ots-step-content">
+            <div class="ots-step-title" id="ots-s0">Commande reçue</div>
+            <div class="ots-step-time">14:32</div>
+          </div>
+        </div>
+        <div class="ots-step ots-active">
+          <div class="ots-dot">👨‍🍳</div>
+          <div class="ots-step-content">
+            <div class="ots-step-title" id="ots-s1">En préparation</div>
+            <div class="ots-step-time" id="ots-active-lbl">en cours...</div>
+          </div>
+        </div>
+        <div class="ots-step">
+          <div class="ots-dot">📦</div>
+          <div class="ots-step-content">
+            <div class="ots-step-title" id="ots-s2">Emballage</div>
+            <div class="ots-step-time">~14:48</div>
+          </div>
+        </div>
+        <div class="ots-step">
+          <div class="ots-dot">🛵</div>
+          <div class="ots-step-content">
+            <div class="ots-step-title" id="ots-s3">En route</div>
+            <div class="ots-step-time">~14:55</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ETA card -->
+      <div class="ots-eta-card">
+        <div class="ots-eta-num" id="ots-eta">28</div>
+        <div class="ots-eta-lbl" id="ots-eta-lbl">min estimées</div>
+        <div class="ots-progress">
+          <div class="ots-progress-fill" style="width:35%"></div>
+        </div>
+        <p class="ots-cta-txt" id="ots-cta-txt">Pas encore commandé ?</p>
+        <button class="ots-cta-btn" onclick="openWhatsApp()" id="ots-cta-btn">Commander →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ══ FAQ ════════════════════════════════════════════════════ -->
+<section id="faq">
+  <div class="faq-inner">
+    <div style="text-align:center;margin-bottom:36px;">
+      <span class="wwd-eyebrow" id="faq-eyebrow" style="background:var(--greenXL);color:var(--green);border-color:rgba(0,176,44,.2);">❓ Questions fréquentes</span>
+      <h2 class="section-title fh" id="faq-title">Tout ce que vous voulez savoir</h2>
+      <div class="title-bar" style="margin-top:10px;"></div>
+    </div>
+    <div id="faq-list">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <button class="faq-q">
+          <div class="faq-q-left"><span class="faq-icon">💵</span><span id="fq1-q">Est-ce que je peux payer en cash à la livraison ?</span></div>
+          <div class="faq-chevron">▾</div>
+        </button>
+        <div class="faq-body" id="fq1-a">Oui, 100%. Vous payez le livreur à la réception de votre commande. Pas besoin de carte bancaire, pas de paiement en ligne. Cash ou carte, c'est vous qui choisissez.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <button class="faq-q">
+          <div class="faq-q-left"><span class="faq-icon">📍</span><span id="fq2-q">Est-ce que vous livrez dans ma rue ?</span></div>
+          <div class="faq-chevron">▾</div>
+        </button>
+        <div class="faq-body" id="fq2-a">Nous livrons dans tout Tétouan, M'diq et Martil. Si vous n'êtes pas sûr, envoyez-nous votre adresse sur WhatsApp et on confirme en moins de 2 minutes.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <button class="faq-q">
+          <div class="faq-q-left"><span class="faq-icon">🧬</span><span id="fq3-q">Comment je sais que les calories sont exactes ?</span></div>
+          <div class="faq-chevron">▾</div>
+        </button>
+        <div class="faq-body" id="fq3-a">Chaque plat est pesé et calculé par notre IA à partir des ingrédients réels utilisés. Les valeurs affichées correspondent à votre portion exacte — pas à une estimation générique.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <button class="faq-q">
+          <div class="faq-q-left"><span class="faq-icon">📲</span><span id="fq4-q">Comment passer une commande ?</span></div>
+          <div class="faq-chevron">▾</div>
+        </button>
+        <div class="faq-body" id="fq4-a">Choisissez vos plats dans notre menu, cliquez "Commander sur WhatsApp", et envoyez votre adresse. Notre équipe confirme votre commande en moins de 5 minutes et votre repas est livré en 45 min.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <button class="faq-q">
+          <div class="faq-q-left"><span class="faq-icon">⏱</span><span id="fq5-q">Et si la livraison prend plus de 45 minutes ?</span></div>
+          <div class="faq-chevron">▾</div>
+        </button>
+        <div class="faq-body" id="fq5-a">C'est rare, mais si ça arrive, vous bénéficiez automatiquement d'une réduction sur votre prochaine commande. Notre garantie 45 min est réelle — nous n'affichons pas ça juste pour vendre.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <button class="faq-q">
+          <div class="faq-q-left"><span class="faq-icon">🎁</span><span id="fq6-q">C'est quoi la réduction de -10% pour la 1ère commande ?</span></div>
+          <div class="faq-chevron">▾</div>
+        </button>
+        <div class="faq-body" id="fq6-a">Mentionnez le code <strong>SAVY10</strong> sur WhatsApp lors de votre première commande et nous appliquons -10% directement sur votre total. Aucune inscription nécessaire.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ═══════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">
+    <svg width="30" height="30" viewBox="0 0 80 80" fill="none"><rect width="80" height="80" rx="20" fill="#00B02C"/><ellipse cx="40" cy="21" rx="13" ry="5" fill="#a7f3d0" opacity=".9"/><rect x="27" y="16" width="26" height="14" rx="4" fill="#a7f3d0" opacity=".9"/><ellipse cx="40" cy="13" rx="9.5" ry="8" fill="#a7f3d0"/><rect x="26" y="28" width="28" height="20" rx="9" fill="#a7f3d0"/><circle cx="34" cy="37" r="3.2" fill="#00B02C"/><circle cx="46" cy="37" r="3.2" fill="#00B02C"/><rect x="28" y="50" width="24" height="18" rx="5" fill="#a7f3d0"/><text x="40" y="63" text-anchor="middle" font-size="9" font-weight="900" fill="#00B02C" font-family="system-ui">A</text></svg>
+    <span>SAVY</span>
+    <span style="color:var(--muted);font-size:12px;" id="footer-loc">· 🇲🇦 Maroc</span>
+  </div>
+  <a href="https://wa.me/212708700830" class="footer-wa" onclick="event.preventDefault();openWhatsApp()">
+    <svg width="16" height="16" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.484.668 4.81 1.836 6.818L2 30l7.384-1.812A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#25D366"/><path d="M22.498 19.533c-.305-.152-1.8-.888-2.079-.99-.278-.102-.481-.152-.683.152s-.783.99-.96 1.193c-.177.202-.354.228-.659.076-.305-.152-1.288-.475-2.453-1.513-.907-.808-1.518-1.806-1.697-2.111-.177-.304-.019-.469.133-.62.137-.136.305-.355.457-.532.152-.178.203-.305.304-.508.103-.203.051-.38-.025-.532-.077-.152-.684-1.648-.937-2.258-.246-.593-.497-.513-.683-.522l-.583-.01c-.203 0-.532.076-.81.38s-1.063 1.04-1.063 2.534 1.089 2.94 1.24 3.143c.152.203 2.143 3.272 5.191 4.586.726.314 1.293.5 1.735.641.729.23 1.392.198 1.916.12.584-.087 1.8-.735 2.054-1.446.254-.71.254-1.32.178-1.447-.077-.127-.278-.203-.583-.355z" fill="#fff"/></svg>
+    <span id="footer-wa-lbl">📞 +212 70 870 0830</span>
+  </a>
+  <p id="footer-copy">© 2025 SAVY · Morocco's First AI Personal Chef</p>
+  <div class="footer-links">
+    <a href="#" class="nav-link" style="font-size:11px;" id="fl-1">Confidentialité</a>
+    <a href="#" class="nav-link" style="font-size:11px;" id="fl-2">Conditions</a>
+    <a href="#" class="nav-link" style="font-size:11px;" id="fl-3">Contact</a>
+  </div>
+</footer>
+
+
+
+<!-- ══ ORDER MODAL ═══════════════════════════════════════════ -->
+
+<!-- ══ STICKY WHATSAPP PILL (left) ══════════════════════════ -->
+<div id="wa-sticky" onclick="openWhatsApp()" title="Commander sur WhatsApp">
+  <svg width="18" height="18" viewBox="0 0 32 32" fill="none">
+    <path d="M16 2C8.268 2 2 8.268 2 16c0 2.484.668 4.81 1.836 6.818L2 30l7.384-1.812A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff"/>
+    <path d="M22.498 19.533c-.305-.152-1.8-.888-2.079-.99-.278-.102-.481-.152-.683.152s-.783.99-.96 1.193c-.177.202-.354.228-.659.076-.305-.152-1.288-.475-2.453-1.513-.907-.808-1.518-1.806-1.697-2.111-.177-.304-.019-.469.133-.62.137-.136.305-.355.457-.532.152-.178.203-.305.304-.508.103-.203.051-.38-.025-.532-.077-.152-.684-1.648-.937-2.258-.246-.593-.497-.513-.683-.522l-.583-.01c-.203 0-.532.076-.81.38s-1.063 1.04-1.063 2.534 1.089 2.94 1.24 3.143c.152.203 2.143 3.272 5.191 4.586.726.314 1.293.5 1.735.641.729.23 1.392.198 1.916.12.584-.087 1.8-.735 2.054-1.446.254-.71.254-1.32.178-1.447-.077-.127-.278-.203-.583-.355z" fill="#25D366"/>
+  </svg>
+  <span id="wa-sticky-lbl">Commander sur WhatsApp</span>
+</div>
+
+<!-- ══ EXIT INTENT POPUP ═════════════════════════════════════ -->
+<div id="checkout-overlay" role="dialog" aria-modal="true" onclick="if(event.target===this)closeCheckout()">
+  <div id="checkout-box">
+    <div class="ck-grab"></div>
+    <button class="ck-x" onclick="closeCheckout()" aria-label="close">✕</button>
+    <div id="ck-form">
+      <div class="ck-head"><div class="ck-logo">SAVY</div><h3 id="ck-title"></h3></div>
+      <div class="ck-stats" id="ck-sum"></div>
+      <div class="ck-card" id="ck-extras-card" style="display:none"><div id="ck-extras"></div></div>
+      <div class="ck-card">
+        <div class="ck-sec" id="ck-sec-info"></div>
+        <label class="ck-f"><span class="ck-ic">👤</span><input class="ck-inp" id="ck-name" autocomplete="name" oninput="ck.name=this.value" placeholder=" "><i id="ck-l-name"></i></label>
+        <label class="ck-f"><span class="ck-ic">📞</span><input class="ck-inp" id="ck-phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" oninput="ck.phone=this.value" placeholder=" "><i id="ck-l-phone"></i></label>
+        <div class="ck-chips" id="ck-city"></div>
+        <label class="ck-f"><span class="ck-ic">📍</span><textarea class="ck-inp" id="ck-addr" rows="2" autocomplete="street-address" oninput="ck.address=this.value" placeholder=" "></textarea><i id="ck-l-addr"></i></label>
+        <label class="ck-f" id="ck-f-company" style="display:none"><span class="ck-ic">🏢</span><input class="ck-inp" id="ck-company" oninput="wpCompany=this.value" placeholder=" "><i id="ck-l-company"></i></label>
+        <label class="ck-f"><span class="ck-ic">📝</span><input class="ck-inp" id="ck-notes" oninput="ck.notes=this.value" placeholder=" "><i id="ck-l-notes"></i></label>
+      </div>
+      <div class="ck-err" id="ck-err"></div>
+      <button class="ck-go" id="ck-go" onclick="submitCheckout()"></button>
+    </div>
+    <div id="ck-done" style="display:none"></div>
+  </div>
+</div>
+<div id="exit-overlay">
+  <div id="exit-modal">
+    <button id="exit-close" onclick="closeExitPopup()">✕</button>
+    <div style="font-size:36px;margin-bottom:8px;">🛵</div>
+    <h3 id="exit-title" style="font-family:'Readex Pro',sans-serif;font-size:18px;font-weight:900;color:var(--text);margin-bottom:6px;">Avant de partir...</h3>
+    <p id="exit-sub" style="font-size:13px;color:var(--sub);line-height:1.6;margin-bottom:16px;">Reçois le menu complet + nos offres du jour directement sur ton WhatsApp 📲</p>
+    <button id="exit-wa-btn" onclick="openWhatsApp();closeExitPopup();" style="
+      width:100%;padding:13px;border-radius:14px;border:none;
+      background:linear-gradient(135deg,#25D366,#128C7E);
+      color:#fff;font-size:14px;font-weight:700;
+      cursor:pointer;font-family:'IBM Plex Sans Arabic',sans-serif;
+      display:flex;align-items:center;justify-content:center;gap:8px;
+    ">
+      <svg width="18" height="18" viewBox="0 0 32 32" fill="none"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.484.668 4.81 1.836 6.818L2 30l7.384-1.812A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#fff" opacity=".9"/><path d="M22.498 19.533c-.305-.152-1.8-.888-2.079-.99-.278-.102-.481-.152-.683.152s-.783.99-.96 1.193c-.177.202-.354.228-.659.076-.305-.152-1.288-.475-2.453-1.513-.907-.808-1.518-1.806-1.697-2.111-.177-.304-.019-.469.133-.62.137-.136.305-.355.457-.532.152-.178.203-.305.304-.508.103-.203.051-.38-.025-.532-.077-.152-.684-1.648-.937-2.258-.246-.593-.497-.513-.683-.522l-.583-.01c-.203 0-.532.076-.81.38s-1.063 1.04-1.063 2.534 1.089 2.94 1.24 3.143c.152.203 2.143 3.272 5.191 4.586.726.314 1.293.5 1.735.641.729.23 1.392.198 1.916.12.584-.087 1.8-.735 2.054-1.446.254-.71.254-1.32.178-1.447-.077-.127-.278-.203-.583-.355z" fill="#25D366"/></svg>
+      <span id="exit-wa-lbl">Envoyer le menu sur WhatsApp</span>
+    </button>
+    <button onclick="closeExitPopup()" style="margin-top:10px;background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;width:100%;" id="exit-dismiss">Non merci, je pars sans mon repas 😅</button>
+  </div>
+</div>
+
+<!-- ══ COMBINED SPEED-DIAL FAB ══════════════════════════════ -->
+<div id="fab-main-wrap">
+  <button id="fab-main" onclick="openChat()" aria-label="Chat SAVY">
+    <img class="fab-logo" alt="SAVY" src="img/asset-7.webp"/>
+    <div class="fab-savy-badge" id="fab-main-badge">1</div>
+  </button>
+</div>
+<div id="fab-group" style="display:none"></div>
+
+<!-- ══ STICKY MOBILE BOTTOM ORDER BAR ══════════════════════ -->
+<div id="mobile-order-bar" role="complementary" aria-label="Order bar">
+  <div id="mobile-order-bar-inner">
+    <div class="mob-bar-left">
+      <div class="mob-bar-title" id="mob-bar-title">🛵 Commander — 45 min</div>
+      <div class="mob-bar-sub"   id="mob-bar-sub">💵 Cash à la livraison · Tétouan</div>
+    </div>
+    <button class="mob-bar-btn" id="mob-bar-btn" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+      Voir le menu
+    </button>
+  </div>
+</div>
+
+<!-- ══ CHAT WINDOW ══════════════════════════════════════════ -->
+<div id="chat-window">
+
+  <!-- Header -->
+  <div class="chat-header">
+    <div class="chat-header-avatar">
+      <svg width="26" height="26" viewBox="0 0 80 80" fill="none">
+        <ellipse cx="40" cy="21" rx="13" ry="5" fill="#a7f3d0" opacity=".9"/>
+        <rect x="27" y="16" width="26" height="14" rx="4" fill="#a7f3d0" opacity=".9"/>
+        <ellipse cx="40" cy="13" rx="9.5" ry="8" fill="#a7f3d0"/>
+        <rect x="26" y="28" width="28" height="20" rx="9" fill="#a7f3d0"/>
+        <circle cx="34" cy="37" r="3.2" fill="#00B02C"/>
+        <circle cx="46" cy="37" r="3.2" fill="#00B02C"/>
+        <rect x="28" y="50" width="24" height="18" rx="5" fill="#a7f3d0"/>
+      </svg>
+    </div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">SAVY Chef</div>
+      <div class="chat-header-status">
+        <span class="chat-status-dot"></span>
+        <span id="chat-status-txt">Online · Meal Engineer</span>
+      </div>
+    </div>
+    <div class="chat-header-actions">
+      <button class="chat-action-btn" onclick="resetChat()" title="Nouvelle conversation">🔄</button>
+      <button class="chat-action-btn" onclick="openWhatsAppOrder()" title="Continuer sur WhatsApp">
+        <svg width="16" height="16" viewBox="0 0 32 32" fill="none">
+          <path d="M16 2C8.268 2 2 8.268 2 16c0 2.484.668 4.81 1.836 6.818L2 30l7.384-1.812A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2z" fill="#25D366"/>
+          <path d="M22.498 19.533c-.305-.152-1.8-.888-2.079-.99-.278-.102-.481-.152-.683.152s-.783.99-.96 1.193c-.177.202-.354.228-.659.076-.305-.152-1.288-.475-2.453-1.513-.907-.808-1.518-1.806-1.697-2.111-.177-.304-.019-.469.133-.62.137-.136.305-.355.457-.532.152-.178.203-.305.304-.508.103-.203.051-.38-.025-.532-.077-.152-.684-1.648-.937-2.258-.246-.593-.497-.513-.683-.522l-.583-.01c-.203 0-.532.076-.81.38s-1.063 1.04-1.063 2.534 1.089 2.94 1.24 3.143c.152.203 2.143 3.272 5.191 4.586.726.314 1.293.5 1.735.641.729.23 1.392.198 1.916.12.584-.087 1.8-.735 2.054-1.446.254-.71.254-1.32.178-1.447-.077-.127-.278-.203-.583-.355z" fill="#fff"/>
+        </svg>
+      </button>
+      <button class="chat-close" onclick="closeChat()">✕</button>
+    </div>
+  </div>
+
+  <!-- Messages -->
+  <div id="chat-msgs"></div>
+
+  <!-- Lead form -->
+  <div id="chat-lead-form">
+    <input class="lead-inp" id="lead-name"  type="text" placeholder="Your full name / اسمك الكامل"/>
+    <input class="lead-inp" id="lead-city"  type="text" placeholder="Adresse / عنوانك (ex: Rue Ibn Batouta, Tétouan)"/>
+    <input class="lead-inp" id="lead-phone" type="tel"  placeholder="WhatsApp (+212 6XX XXX XXX)"/>
+    <button class="lead-submit" id="lead-submit-btn" onclick="submitLead()">
+      🧬 Engineer My Meal Now ✨
+    </button>
+    <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:7px;">🔒 Your info is private · never shared</p>
+  </div>
+
+  <!-- Input area -->
+  <div class="chat-input-area" id="chat-input-area">
+    <button id="chat-scroll-btn" onclick="scrollChatToBottom()" title="Défiler vers le bas">↓</button>
+    <div id="quick-chips" class="q-chips-scroll"></div>
+    <div class="chat-input-row">
+      <button class="chat-voice-btn" id="voice-btn" onclick="toggleVoice()" title="Entrée vocale">🎤</button>
+      <input class="chat-inp" id="chat-inp" placeholder="Message SAVY..." onkeydown="if(event.key==='Enter')chatSend()"/>
+      <button class="chat-send" id="chat-send-btn" onclick="chatSend()">➤</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/3877ef7f3b.js"></script>
+<style>:root,body{--green:#00B02C;--greenL:#00B02C;--greenXL:#E6F8EA;--mint:#E6F8EA}
+</style><link rel="stylesheet" href="assets/32560be6e5.css"><script src="assets/7d4e3eefbf.js"></script><script>if("serviceWorker"in navigator&&/^https?:/.test(location.protocol)){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){});});}</script><link rel="stylesheet" href="assets/260752e271.css"><script src="assets/bca069a20c.js"></script><link rel="stylesheet" href="assets/a8aa6705e6.css"><script src="assets/600adf0d5b.js"></script><style>#real-reviews{padding:22px 16px;background:#fff}
+#real-reviews h3{font-size:18px;font-weight:800;margin:0 0 12px;color:#0F172A}
+#real-reviews .rr-row{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+#real-reviews .rr{flex:0 0 78%;scroll-snap-align:start;margin:0;background:#F8FAFC;border:1px solid rgba(15,23,42,.06);border-radius:18px;padding:14px}
+#real-reviews blockquote{margin:0 0 8px;font-size:14px;line-height:1.6;color:#334155}
+#real-reviews figcaption{font-size:12px;font-weight:700;color:#64748B}
+</style><script>(function(){
+  /* Shows ONLY real customer reviews from reviews.json; hidden until there are at least 3. */
+  fetch("reviews.json",{cache:"no-cache"}).then(function(r){return r.ok?r.json():[];}).then(function(list){
+    if(!Array.isArray(list))return;
+    list=list.filter(function(x){return x&&x.name&&x.text;});
+    if(list.length<3||document.getElementById("real-reviews"))return;
+    var f=document.querySelector("footer");if(!f)return;
+    var ar=function(){return document.documentElement.lang==="ar"||(typeof lang!=="undefined"&&lang==="ar");};
+    var sec=document.createElement("section");sec.id="real-reviews";
+    var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});};
+    sec.innerHTML='<h3>'+(ar()?"آراء زبائننا":"Avis de nos clients")+'</h3><div class="rr-row">'+list.slice(0,10).map(function(x){
+      return '<figure class="rr"><blockquote>'+esc(x.text)+'</blockquote><figcaption>'+esc(x.name)+(x.city?" · "+esc(x.city):"")+'</figcaption></figure>';}).join("")+'</div>';
+    f.parentNode.insertBefore(sec,f);
+  }).catch(function(){});
+})();
+</script><style>#trust-strip{display:flex;gap:10px;padding:9px 10px;background:#fff;border-bottom:1px solid rgba(15,23,42,.06);justify-content:center;flex-wrap:nowrap;overflow:hidden}
+#trust-strip span{font-size:10.5px;font-weight:700;color:#475569;white-space:nowrap}
+</style><script src="assets/44e0cbd8b5.js"></script><link rel="stylesheet" href="assets/9c4977ccbc.css"><script src="savy-config.js"></script><script src="assets/9b4a4d6dc0.js"></script><script src="assets/3e95a1bca7.js"></script><script>(function(){
+  var K="savy_lang";
+  try{
+    var _sl=setLang;
+    setLang=function(l){try{sessionStorage.setItem(K,l);}catch(e){}return _sl.apply(this,arguments);};
+    var s=sessionStorage.getItem(K);
+    if(s&&s!==lang&&/^(ar|fr|en)$/.test(s))setLang(s);
+  }catch(e){}
+})();
+</script><link rel="stylesheet" href="assets/6188d3906c.css"><link rel="stylesheet" href="assets/73b604a0a3.css"><link rel="stylesheet" href="assets/894f4e687f.css"><link rel="stylesheet" href="assets/ff99b007a8.css"><script src="assets/7fd894c306.js"></script><link rel="stylesheet" href="assets/92b5dba0c6.css"><script src="assets/9a894cbcad.js"></script><script src="assets/12221fb879.js"></script><link rel="stylesheet" href="assets/5ba2440f08.css"><script src="assets/ce9951cc01.js"></script><script>(function(){
+  /* keep pop-ups above the on-screen keyboard and the typed field in view */
+  var SEL=["#sg-overlay","#checkout-overlay","#welcome-overlay"];
+  var vv=window.visualViewport;
+  function fit(){
+    var h=vv?vv.height:window.innerHeight,t=vv?vv.offsetTop:0;
+    var kb=(window.innerHeight-h)>120;
+    document.documentElement.classList.toggle("sx-kb",kb);
+    SEL.forEach(function(s){var e=document.querySelector(s);if(!e)return;
+      if(kb){e.style.top=t+"px";e.style.height=h+"px";e.style.bottom="auto";}
+      else{e.style.top="";e.style.height="";e.style.bottom="";}});
+    var a=document.activeElement;if(kb&&a&&/^(INPUT|TEXTAREA|SELECT)$/.test(a.tagName))reveal(a);
+  }
+  function reveal(el){
+    var box=el.closest("#sg-box,#checkout-box,#welcome-box");if(!box)return;
+    var lab=el.closest("label")||el;
+    var b=box.getBoundingClientRect(),r=lab.getBoundingClientRect();
+    var pad=14;
+    if(r.bottom>b.bottom-pad)box.scrollTop+=r.bottom-b.bottom+pad+40;
+    else if(r.top<b.top+pad)box.scrollTop-=b.top-r.top+pad+20;
+  }
+  if(vv){vv.addEventListener("resize",fit);vv.addEventListener("scroll",fit);}
+  window.addEventListener("resize",fit);
+  document.addEventListener("focusin",function(e){
+    if(!/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName))return;
+    [60,250,500].forEach(function(ms){setTimeout(function(){fit();reveal(e.target);},ms);});
+  });
+  document.addEventListener("focusout",function(){setTimeout(fit,150);});
+})();
+</script></body>
+</html>
